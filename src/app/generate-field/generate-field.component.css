@@ -1,0 +1,27 @@
+.btnField {
+  background-color: bisque;
+  color: transparent;
+  width: 35px;
+  height: 35px;
+  border-radius: 0px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.btnField:hover{
+  background-color: black;
+}
+
+.btnShip {
+  background-color: darkslateblue;
+  color: transparent;
+  width: 35px;
+  height: 35px;
+  border-radius: 0px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.btnShip:hover{
+  background-color: black;
+}

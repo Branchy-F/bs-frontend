@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-header" style="text-align:center">
+    {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <div class="container-fluid">
+      <div class="d-inline-block border border-primary">
+        <table>
+          <tr *ngFor='let line of field; let x = index'>
+            <td *ngFor='let element of line; let y = index'>
+                <button *ngIf='clickable' type="button"
+                        [className]="field[x][y] == 0 ? 'btnField' : 'btnShip'"
+                        (click)='setShip(x, y)'>.
+                </button>
+                <button *ngIf='!clickable' type="button" class="btnField">.
+                </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="d-inline-block border border-info">
+        <table *ngIf='!ready'>
+          <tr>
+            <td>
+              <h5 [style.color] = "battleship >= 0 ? 'black' : 'red'">(4 parts) Battleship - {{battleship}} of max 1</h5>
+              <h5>(3 parts) Cruisers - {{cruisers}} of max 2</h5>
+              <h5>(2 parts) Destroyers - {{destroyers}} of max 3</h5>
+              <h5>(1 parts) Submarines - {{submarines}} of max 4</h5>
+            </td>
+          </tr>
+        </table>
+        <button *ngIf='ready' class='btn btn-primary' (click)='startGame()'>
+          Start Game
+        </button>
+      </div>
+   </div>
+    <div class="container-fluid">
+      <div style="text-align:left">
+        {{message}}
+      </div>
+    </div>
+  </div>
+</div>
