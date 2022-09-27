@@ -26,6 +26,7 @@ export class GenerateFieldComponent implements OnInit, OnDestroy {
   cruisers: number = 0;
   destroyers: number = 0;
   submarines: number = 0;
+  errorMessage: any;
   
   constructor(private router: Router, private http: HttpService) {   }
 
